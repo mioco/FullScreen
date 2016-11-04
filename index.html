@@ -7,17 +7,50 @@
 </head>
 <body>
   <div class="home-container">
-    <section id="p1"><h1>p1</h1></section>
-    <section id="p2"><h1>p2</h1></section>
-    <section id="p3"><h1>p3</h1></section>
-    <section id="p4"><h1>p4</h1></section>
+    <div target-name="page-0" id="p1">
+      
+    </div>
+    <div target-name="page-1" id="p2">
+      <title></title>
+    </div>
+    <div target-name="page-2" id="p3">
+      <div class="container">
+        <div class="section" id="section-1"></div>
+        <div class="section" id="section-2"></div>
+        <div class="section" id="section-3"></div>
+        <div class="section" id="section-4"></div>
+        <div class="section" id="section-5"></div>          
+      </div>
+    </div>
+    <div target-name="page-3" id="p4">
+      <div class="container">
+        <div class="section" id="section-6"></div>
+        <div class="section" id="section-7"></div>
+        <div class="section" id="section-8"></div>
+        <div class="section" id="section-9"></div>
+        <div class="section" id="section-10"></div>
+      </div>
+    </div>
+    <div target-name="page-4" id="p5">
+      <div class="container">
+      </div>
+    </div>    
+  </div>
+    <div class="section-outfloat" id="section-1-0"></div>
+    <div class="section-outfloat" id="section-5-0"></div>
   </div>
   <div class="home-nav"></div>
   <script src="./dist/js/jquery.min.js"></script>
   <script src="./dist/js/jquery.mousewheel.js"></script>
+  <script src="./dist/js/screen.js"></script>
   <script src="./dist/js/main.js"></script>
   <script>
-      pageNav($('.home-nav'), ['1', '2', '3', '4'])
+    Screen.init({
+      pageCount: 5,
+      pageDOM: $('.home-container'),
+      navDOM: $('.home-nav'),
+      direction: 1
+    })
     
   </script>
 </body>

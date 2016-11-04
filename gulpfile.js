@@ -3,7 +3,6 @@ const concat = require('gulp-concat');
 const connect = require('gulp-connect');
 const livereload = require('gulp-livereload');
 const sass = require('gulp-sass');
-const uglify = require('gulp-uglify');
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 
