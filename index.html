@@ -8,56 +8,121 @@
 <body>
   <div class="home-container">
     <div target-name="page-0" id="p1">
-      
+      <nav>
+        <div class="nav-container">
+          <h1>SAST&nbsp;- </h1>
+        </div>            
+        <ul>
+          <li><a href="">技术</a></li>
+          <li><a href="">办公</a></li>
+          <li><a href="">创新</a></li>
+        </ul>      
+      </nav>
+      <div class="jumbotron">          
+        <div class="jumbotron-title">
+          <p id="jum-title-p1">Students' Association for Science and Technology</p>
+          <p id="jum-title-p2">大学生科学与技术协会</p>          
+        </div>
+      </div>
+      <div class="home-right">
+        <strong>南<br/>京<br/>邮<br/>电<br/>大<br/>学<br/>科<br/>学<br/>与<br/>技<br/>术<br/>协<br/>会</strong>
+      </div>
+      <div class="clear"></div>
+      <div class="home-bottom">
+        <small>@2016-</small>
+        <ul>
+          <li><strong>登陆</strong></li>
+          <li><strong>注册</strong></li>
+        </ul>
+      </div>
     </div>
+
     <div target-name="page-1" id="p2">
-      <title></title>
+      <div class="top">
+        <div class="img-box" id="img-box">
+        </div>
+      </div>
+      <div class="down"></div>
     </div>
     <div target-name="page-2" id="p3">
       <div class="container">
         <div class="section" id="section-1">
-          <div class="orgInfo"><h1>SECTION</h1></div>
+          <div class="orgInfo">
+            <h1>NETWORK</h1>
+            <span>网络部</span>
+          </div>
         </div>
-        <div class="section" id="section-2"></div>
+        <div class="section" id="section-2">
+          <div class="orgInfo">
+            <h1>COMPUTER</h1>
+            <span>计算机部</span> 
+          </div>
+        </div>
         <div class="section" id="section-3">
-          <div class="orgInfo"><h1>SECTION</h1></div>
+          <div class="orgInfo">
+            <h1>ELECTRON</h1>
+            <span>电子部</span>
+          </div>
         </div>
         <div class="section" id="section-4">
-          <div class="orgInfo"><h1>SECTION</h1></div>
+          <div class="orgInfo">
+            <h1>OFFICE</h1>
+            <span>办公室</span>
+          </div>
         </div>
-        <div class="section" id="section-5"></div>          
+        <div class="section" id="section-5">          
+          <div class="orgInfo">
+            <h1>COMMUNICATION</h1>
+            <span>外联部</span>
+          </div>
+        </div>          
       </div>
     </div>
     <div target-name="page-3" id="p4">
       <div class="container">
-        <div class="section" id="section-6"></div>
+        <div class="section" id="section-6">
+          <div class="orgInfo">
+            <h1>PUBLICITY</h1>
+            <span>宣传部</span>
+          </div>
+        </div>
         <div class="section" id="section-7">
-          <div class="orgInfo"><h1>SECTION</h1></div>
+          <div class="orgInfo">
+            <h1>DEVELOPMENT</h1>
+            <span>社发部</span>
+          </div>
         </div>
         <div class="section" id="section-8">
-          <div class="orgInfo"><h1>SECTION</h1></div>
+          <div class="orgInfo">
+            <h1>EVENTS</h1>
+            <span>赛事部</span>
+          </div>
         </div>
-        <div class="section" id="section-9"></div>
+        <div class="section" id="section-9">
+          <div class="orgInfo">
+            <h1>SAST-STUDIO</h1>
+            <span>SAST工作室</span>
+          </div>
+        </div>
         <div class="section" id="section-10">
-          <div class="orgInfo"><h1>SECTION</h1></div>
+          <div class="orgInfo">
+            <h1>AFFILIATED-ASSOCIATIOH</h1>
+            <span>直属社团</span>
+          </div>
         </div>
       </div>
     </div>
     <div target-name="page-4" id="p5">
       <div class="container">
         <div class="text">
-          <h1>TEXT</h1>
+          <h1>关于我们</h1>
           <p>这里这么多字傻了吧卧槽一个简单的动画我竟然写了这么久！css3我日啊</p>
         </div>
       </div>
     </div>    
   </div>
-    <div class="section-outfloat hidden" id="section-1-0">
-      <div class="orgInfo"><h1>SECTION</h1></div>
-    </div>
-    <div class="section-outfloat hidden" id="section-5-0">
-      <div class="orgInfo"><h1>SECTION</h1></div>
-    </div>
+    <div class="section-outfloat hidden" id="section-1-0"></div>
+    <div class="section-outfloat hidden" id="section-5-0"></div>
   </div>
   <div class="home-nav"></div>
   <script src="./dist/js/jquery.min.js"></script>
@@ -69,7 +134,8 @@
       pageCount: 5,
       pageDOM: $('.home-container'),
       navDOM: $('.home-nav'),
-      direction: 1
+      direction: 1,
+      speed: 300
     })
     
   </script>

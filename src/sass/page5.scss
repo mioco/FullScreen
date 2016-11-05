@@ -1,0 +1,53 @@
+@mixin prefix($command, $val) {
+  #{$command}: $val;
+  -moz-#{$command}: $val;
+  -webkit-#{$command}: $val;
+}
+@media screen and (min-width: 790px){
+  #p5{
+    @keyframes p5{
+      0%{
+        margin-left: -100%;
+        opacity: 0;
+      }
+      80%{
+        opacity: 1;
+      }
+    }
+    .container{
+      .p5{
+        @include prefix(animation, p5 1s);
+      }
+      .text{
+        padding: 1.5em;
+        position: absolute;
+        width: 40%;
+        left: 50%;
+        top: 25%;
+      }      
+      position: relative;
+    }
+  }
+
+  .section-1-4{
+    width: 4vw;
+    height: 40vh;
+    margin: 30vh 0 0 13vw;
+    background: #ddd;
+  }
+  .section-5-4{
+        width: 29vw;
+    height: 50vh;
+    background: #ccc;
+    margin: 25vh 0 0 15vw;
+
+  }
+
+}
+@media screen and (max-width: 790px){
+  #p5{
+    .container{
+      position: relative;
+    }
+  }
+}

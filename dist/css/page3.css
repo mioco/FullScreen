@@ -1,0 +1,32 @@
+@media screen and (min-width: 790px) {
+  #p3 .container {
+    overflow: hidden; }
+    #p3 .container .section:first-child {
+      width: 66.66667%;
+      height: 60%; }
+    #p3 .container .section:nth-child(2) {
+      width: 33.33333%;
+      height: 60%; }
+    #p3 .container .section {
+      width: 33.33333%;
+      height: 40%; }
+  .section-1-2 {
+    left: 62.33333vw;
+    top: 13vh;
+    width: 24.66667vw;
+    height: 44.4vh; }
+  .section-5-2 {
+    left: 62.33333vw;
+    top: 57.4vh;
+    width: 24.66667vw;
+    height: 29.6vh; } }
+
+@media screen and (max-width: 790px) {
+  #p3 .container {
+    width: 80vw;
+    height: 85vh;
+    margin: 7.5vh auto; }
+    #p3 .container .section {
+      width: 100%;
+      height: 20vw;
+      border: 1px solid #ddd; } }

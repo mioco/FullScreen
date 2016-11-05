@@ -1,0 +1,48 @@
+@media screen and (min-width: 790px) {
+  #p1 ul li {
+    float: right;
+    list-style: none; }
+  #p1 nav {
+    height: 12vh;
+    width: 92vw;
+    box-sizing: border-box;
+    padding: 1vw 0 0 1vw; }
+    #p1 nav h1 {
+      margin: 0;
+      float: left;
+      font-size: 4vh; }
+    #p1 nav ul li {
+      margin-left: 2vw; }
+  #p1 .jumbotron {
+    float: left;
+    background-image: url("../img/bg-1.jpg");
+    background-size: cover;
+    height: 75vh;
+    width: 92vw;
+    overflow: hidden; }
+    #p1 .jumbotron img {
+      width: 100%;
+      height: auto; }
+    #p1 .jumbotron .jumbotron-title {
+      margin: 20vh 20vw; }
+      #p1 .jumbotron .jumbotron-title p {
+        background: #fff;
+        padding: 1.5vw;
+        font-size: 1.5vw;
+        display: inline-block;
+        margin: 5px; }
+  #p1 .home-right {
+    text-align: center; }
+  #p1 .home-bottom {
+    width: 92vw; }
+    #p1 .home-bottom ul {
+      float: right; }
+      #p1 .home-bottom ul li {
+        margin-left: 1vw; } }
+
+@media screen and (max-width: 790px) {
+  #p1 {
+    background-image: url("../img/bg-1.jpg");
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover; } }

@@ -1,0 +1,31 @@
+@media screen and (min-width: 790px) {
+  #p2 {
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    left: 100vw; }
+    #p2 div {
+      float: left; }
+    #p2 .top {
+      width: 60vw;
+      height: 100vh; }
+      #p2 .top .img-box {
+        width: 30vw;
+        height: 60vh;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 10vh;
+        background: #abc; }
+    #p2 .down {
+      width: 40vw;
+      height: 100vh;
+      background: #ccb0a1; }
+  .section-1-1 {
+    width: 30vw;
+    height: 60vh;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 10vh;
+    background: #abc; } }

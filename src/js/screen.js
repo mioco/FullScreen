@@ -1,5 +1,12 @@
+/**
+ * 基于jq和mousewheel
+ * mousewheel要不要集成进来呢orz
+ * 2016-11-3
+ */
+
 (function (root, factory) {
   'use strict';
+
   window.Screen = factory();
 })(undefined, function () {
   var screen = {};
@@ -51,6 +58,9 @@
         direction = 'top';
       }
 
+      //转场参数
+      let lastFlag = conf.flag;
+
       if (event.deltaY == -1) {
         conf.flag = conf.flag == conf.pageCount - 1 ? conf.pageCount - 1 : conf.flag + 1;
       }
@@ -58,6 +68,8 @@
         conf.flag = conf.flag == 0 ? conf.flag : conf.flag - 1;
       }
       distance = -conf.flag * unit;
+
+      conf.fade(conf.flag, lastFlag);
       move(direction, distance, conf.flag);
     });
     //窗口大小变化监听
@@ -74,11 +86,20 @@
   screen.skip = function (num) {
     var direction = this.config.direction ? 'left' : 'top';
     var distance = -num * $(window).width();
+    conf.fade(num, conf.flag);
     move(direction, distance, num);
+    this.config.flag = num;
+  };
+
+  screen.fade = function(flag, lastFlag){
+    console.log(flag, lastFlag)
+    setTimeout($('[target-name="page-' + flag + '"]').css('opacity', 1), this.config.speed);
+    setTimeout($('[target-name="page-' + lastFlag + '"]').css('opacity', 0), this.config.speed);
   };
 
   screen.init = function (options) {
     setConf(options);
   };
+
   return screen;
 });

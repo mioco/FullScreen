@@ -1,6 +1,3 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-'use strict';
-
 /**
  * 基于jq和mousewheel
  * mousewheel要不要集成进来呢orz
@@ -12,6 +9,7 @@
 
   window.Screen = factory();
 })(undefined, function () {
+  'use strict';
   var screen = {};
 
   var setConf = function setConf(options) {
@@ -61,6 +59,9 @@
         direction = 'top';
       }
 
+      //转场参数
+      let lastFlag = conf.flag;
+
       if (event.deltaY == -1) {
         conf.flag = conf.flag == conf.pageCount - 1 ? conf.pageCount - 1 : conf.flag + 1;
       }
@@ -68,6 +69,7 @@
         conf.flag = conf.flag == 0 ? conf.flag : conf.flag - 1;
       }
       distance = -conf.flag * unit;
+      Screen.fade(conf.flag, lastFlag);
       move(direction, distance, conf.flag);
     });
     //窗口大小变化监听
@@ -84,14 +86,21 @@
   screen.skip = function (num) {
     var direction = this.config.direction ? 'left' : 'top';
     var distance = -num * $(window).width();
+    this.fade(num, this.config.flag);
     move(direction, distance, num);
     this.config.flag = num;
+  };
+
+  screen.fade = function(flag, lastFlag){
+    if (lastFlag < this.config.pageCount && flag !== lastFlag) {
+      setTimeout(function(){$('[target-name="page-' + flag + '"]').css('opacity', 1)}, this.config.speed);
+      setTimeout(function(){$('[target-name="page-' + lastFlag + '"]').css('opacity', 0)}, this.config.speed);
+    }
   };
 
   screen.init = function (options) {
     setConf(options);
   };
+
   return screen;
 });
-
-},{}]},{},[1]);

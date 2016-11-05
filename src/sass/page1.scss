@@ -1,0 +1,70 @@
+@mixin prefix($command, $val) {
+  #{$command}: $val;
+  -moz-#{$command}: $val;
+  -webkit-#{$command}: $val;
+}
+@media screen and (min-width: 790px){
+  #p1{
+    ul li{
+      float: right;
+      list-style: none;
+    }
+    nav{
+      height: 12vh;
+      width: 92vw;
+      box-sizing: border-box;
+      padding: 1vw 0 0 1vw;
+      h1{
+        margin: 0;
+        float: left;
+        font-size: 4vh;
+      }
+      ul li{
+        margin-left: 2vw;
+      }
+      .nav-container{
+      }
+    }
+    .jumbotron{
+      float: left;
+      background-image: url('../img/bg-1.jpg');
+      background-size: cover;
+      height: 75vh;
+      width: 92vw;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: auto;
+      }
+      .jumbotron-title{ 
+        margin: 20vh 20vw;
+        p{
+          background: #fff;       
+          padding: 1.5vw;
+          font-size: 1.5vw;
+          display: inline-block;
+          margin: 5px;
+        }
+      }
+    }
+    .home-right{
+      text-align: center;
+    }
+    .home-bottom{
+      width: 92vw;
+      ul{
+        float: right;
+        li{
+          margin-left: 1vw;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 790px){
+  #p1{
+    background-image: url('../img/bg-1.jpg');
+    @include prefix(background-size, cover);
+  }
+}

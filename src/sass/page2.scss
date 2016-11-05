@@ -1,0 +1,46 @@
+@mixin prefix($command, $val) {
+  #{$command}: $val;
+  -moz-#{$command}: $val;
+  -webkit-#{$command}: $val;
+}
+@media screen and (min-width: 790px){
+  #p2{
+    // background-image: url('../img/bg-2.jpg');
+    @include prefix(background-size, cover);
+    left: 100vw;
+    div{
+      float: left;
+    }
+    .top{
+      width: 60vw;
+      height: 100vh;
+      .img-box{
+        width: 30vw;
+        height: 60vh;
+        overflow: hidden; 
+        position: absolute;
+        right: 0;
+        top: 10vh;
+        background: #abc;
+      }
+    }
+    .down{
+      width: 40vw;
+      height: 100vh;
+      background: #ccb0a1;
+    }
+  }
+  .section-1-1{
+        width: 30vw;
+        height: 60vh;
+        overflow: hidden; 
+        position: absolute;
+        right: 0;
+        top: 10vh;
+        background: #abc;
+
+  }
+
+}
+
+@media screen and (max-width: 790px){}
