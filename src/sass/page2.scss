@@ -7,38 +7,48 @@
   #p2{
     // background-image: url('../img/bg-2.jpg');
     @include prefix(background-size, cover);
+    @keyframes textanime{
+      0%{
+        top: 80vh;
+        opacity: 0;
+      }
+      80%{top: 0;}
+    }
     left: 100vw;
     div{
       float: left;
     }
-    .top{
-      width: 60vw;
-      height: 100vh;
-      .img-box{
-        width: 30vw;
-        height: 60vh;
-        overflow: hidden; 
-        position: absolute;
-        right: 0;
-        top: 10vh;
-        background: #abc;
-      }
-    }
-    .down{
-      width: 40vw;
-      height: 100vh;
-      background: #ccb0a1;
+    .left{
+      display: none;
     }
   }
   .section-1-1{
-        width: 30vw;
-        height: 60vh;
-        overflow: hidden; 
-        position: absolute;
-        right: 0;
-        top: 10vh;
-        background: #abc;
 
+    // @keyframes p2_right {
+    //   from{margin-right: -50vw;}
+    //   to{margin-right: 0;}
+    // }
+    right: 0;    
+    // #right-box{
+      // @include prefix(animation, p2_right 1s ease)
+      width: 40vw;
+      height: 100vh;
+      background: #ccb0a1;
+      background-image: url('../img/bg-2.jpg');
+      @include prefix(background-size, cover);
+      @include prefix(background-position, 0 0);
+    // }
+
+  }
+
+  .section-5-1{
+    @include prefix(animation, textanime 1.5s ease )
+    width: 60vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 20vh 15vw;
+    line-height: 2.2;
+    text-align: justify;
   }
 
 }

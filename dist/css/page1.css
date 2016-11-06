@@ -25,7 +25,15 @@
       height: auto; }
     #p1 .jumbotron .jumbotron-title {
       margin: 20vh 20vw; }
+  @keyframes p1_text {
+    from {
+      margin-top: 10vw; }
+    to {
+      margin-top: 0; } }
       #p1 .jumbotron .jumbotron-title p {
+        animation: p1_text 1s ease;
+        -moz-animation: p1_text 1s ease;
+        -webkit-animation: p1_text 1s ease;
         background: #fff;
         padding: 1.5vw;
         font-size: 1.5vw;
@@ -38,7 +46,9 @@
     #p1 .home-bottom ul {
       float: right; }
       #p1 .home-bottom ul li {
-        margin-left: 1vw; } }
+        margin-left: 1vw; }
+  .section-1-0, .section-5-0 {
+    display: none; } }
 
 @media screen and (max-width: 790px) {
   #p1 {

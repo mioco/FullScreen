@@ -5,7 +5,7 @@ var classSet = function(dom, num) {
 
 var sectionMove = function(flag) {
   setTimeout(function(){
-    if( flag >= 1 && flag <= 4 ){
+    if( flag >= 0 && flag <= 4 ){
       classSet($('#section-1-0'), flag)
       classSet($('#section-5-0'), flag)
     }else{
@@ -14,20 +14,21 @@ var sectionMove = function(flag) {
     }
     switch(parseInt(flag)) {
       case 1:
-        $('#section-1-0').html($('#img-box').html());
-        $('#section-5-0').html();
+        $('#section-1-0').html($('.right').html());
+        $('#section-5-0').html($('.left').html());
+        $('.left').css('opacity', 0)
         break;
       case 2:
-        $('#section-1-0').html($('#section-2').html());
-        $('#section-5-0').html($('#section-5').html());
+        $('#section-1-0').addClass('active').html($('#p3 .left').html());
+        $('#section-5-0').html($('#p3 .right').html());
         break;
       case 3:
-        $('#section-1-0').html($('#section-6').html());
-        $('#section-5-0').html($('#section-9').html());
+        $('#section-1-0').html($('#p4 .container').html());
+        $('#section-5-0').html('');
         break;
       case 4:
-        $('#section-1-0').html($('#section-2').html());
-        $('#section-5-0').html($('#section-5').html());
+        $('#section-1-0').html('');
+        $('#section-5-0').html('');
         break;
       default: break;
     }    
@@ -52,19 +53,33 @@ $(document).on('mouseover', '.home-nav-item', function() {
   p5(flag[0]);
 })
 
-$('.orgInfo').on('click', function(){
+$(document).on('click', '.orgInfo', function(){
   if ( $(this).hasClass('active') ) {
-    $(this).removeClass('active')
+    $(this).removeClass('active').next().removeClass('active');
+    $('.section-5-3').removeClass('active');
+
   }else{
-    $('html').find('.orgInfo').removeClass('active');
-    $(this).addClass('active')
+    $('html').find('.orgInfo').removeClass('active').next().removeClass('active');
+    $(this).addClass('active').next().addClass('active')
+    $('.section-5-3').addClass('active');
   }
 })
 
-var p5 = function(flag) {
+let p5 = function(flag) {
   if (flag == 4) {
     $('#p5 .container .text').addClass('p5')
   }else{
     $('#p5 .container .text').removeClass('p5')
   }
 }
+
+let p3_flag = 0;
+$('.turnBtn').on('click', function() {  
+  if (p3_flag) {
+    p3_flag = 0;
+    $('#section-5-0').addClass('active').siblings('.section-outfloat').removeClass('active');
+  }else {
+    p3_flag = 1;
+    $('#section-1-0').addClass('active').siblings('.section-outfloat').removeClass('active');
+  }
+})

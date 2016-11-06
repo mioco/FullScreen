@@ -36,9 +36,14 @@
         width: 100%;
         height: auto;
       }
-      .jumbotron-title{ 
+      .jumbotron-title{
+        @keyframes p1_text {
+          from{margin-top: 10vw;}
+          to{margin-top: 0;}
+        }
         margin: 20vh 20vw;
         p{
+          @include prefix(animation, p1_text 1s ease)
           background: #fff;       
           padding: 1.5vw;
           font-size: 1.5vw;
@@ -59,6 +64,10 @@
         }
       }
     }
+  }
+
+  .section-1-0, .section-5-0{
+    display: none;
   }
 }
 

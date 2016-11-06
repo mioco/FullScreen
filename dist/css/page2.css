@@ -4,28 +4,35 @@
     -moz-background-size: cover;
     -webkit-background-size: cover;
     left: 100vw; }
+  @keyframes textanime {
+    0% {
+      top: 80vh;
+      opacity: 0; }
+    80% {
+      top: 0; } }
     #p2 div {
       float: left; }
-    #p2 .top {
-      width: 60vw;
-      height: 100vh; }
-      #p2 .top .img-box {
-        width: 30vw;
-        height: 60vh;
-        overflow: hidden;
-        position: absolute;
-        right: 0;
-        top: 10vh;
-        background: #abc; }
-    #p2 .down {
-      width: 40vw;
-      height: 100vh;
-      background: #ccb0a1; }
+    #p2 .left {
+      display: none; }
   .section-1-1 {
-    width: 30vw;
-    height: 60vh;
-    overflow: hidden;
-    position: absolute;
     right: 0;
-    top: 10vh;
-    background: #abc; } }
+    width: 40vw;
+    height: 100vh;
+    background: #ccb0a1;
+    background-image: url("../img/bg-2.jpg");
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-position: 0 0;
+    -moz-background-position: 0 0;
+    -webkit-background-position: 0 0; }
+  .section-5-1 {
+    animation: textanime 1.5s ease;
+    -moz-animation: textanime 1.5s ease;
+    -webkit-animation: textanime 1.5s ease;
+    width: 60vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 20vh 15vw;
+    line-height: 2.2;
+    text-align: justify; } }

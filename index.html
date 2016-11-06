@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Document</title>
   <link rel="stylesheet" href="./dist/css/style.css">
 </head>
@@ -38,18 +39,24 @@
     </div>
 
     <div target-name="page-1" id="p2">
-      <div class="top">
-        <div class="img-box" id="img-box">
-        </div>
+      <div class="left">
+        <h1>SAST - 南邮校科协简介</h1>
+        <p>南京邮电大学大学生科学技术协会（Students’ Association for Science and Technology, 简称SAST，中文简称南邮校科协）。<br />
+          成立于1992年。它是在校党委领导、校团委指导下，依照国家法规和大学生规章制度，独立开展活动的学生科技文化及学术研究的组织。南邮校科协现分为办公中心、技术中心、创新中心三大中心，其中创新中心下还设有CG爱好者协会、ERP协会、苹果爱好者俱乐部等九个直属社团，组织管理有序，机构设置严谨。现为南京邮电大学九大校级学生组织中唯一一个技术类学生组织。</p>
       </div>
-      <div class="down"></div>
+      <div class="right">        
+        <div id="right-box"></div>
+      </div>
     </div>
     <div target-name="page-2" id="p3">
-      <div class="container">
+      <div class="left">
         <div class="section" id="section-1">
           <div class="orgInfo">
             <h1>NETWORK</h1>
             <span>网络部</span>
+          </div>
+          <div class="orgDetail">
+            <p>网络部是一个热衷于web前后端开发、网络安全和多媒体制作的技术部门。我们不仅喜欢热门的web前端技术，我们还研究数据库 服务器 http协议 web脚本语言(python php ruby and Node.js)等方面的知识使用。我们喜欢渗透、逆向的快感，我们还做的了视频拍的了绚丽的mv。我们希望和志同道合的人在一起做喜欢的事情，期待你们的加入！</p>
           </div>
         </div>
         <div class="section" id="section-2">
@@ -57,17 +64,29 @@
             <h1>COMPUTER</h1>
             <span>计算机部</span> 
           </div>
+          <div class="orgDetail">
+            <p>计算机部计算机部是校科协的传统部门，主要负责开展计算机软件方面的竞赛、技术培训以及项目和科研工作，目前主要有以下几个研究方向：Windows编程，acm算法，linux系统，游戏开发。同时拥有若干个项目组和专业研究小组。只要你是对有关于计算机各方面感兴趣的，无论你技术高低，都可以来加入，在这里，你总能找到一群有着相同兴趣爱好的人，他们就是你的良师益友。欢迎对计算机软件与网络等方向感兴趣的各位新生加入。</p>
+          </div>
         </div>
         <div class="section" id="section-3">
           <div class="orgInfo">
             <h1>ELECTRON</h1>
             <span>电子部</span>
           </div>
-        </div>
+          <div class="orgDetail">
+            <p>电子部由爱好硬件制作与应用的学生组成。主要职能是帮助广大学生熟悉单片机基本操作与原理并加以应用，提高学生对硬件的认识程度。主要研究电子电路，片上系统，数字电路，模拟电路等等相关的知识和技术。电子部日常培训采用平行组的形式，对部员统一进行电路焊接、程序设计等培训。成员通过平时的动手实践，更加地了解了自身的爱好，更好地发展了自身的兴趣。同时，电子部会定期布置一些有关硬件设计与制作的任务，促进学术氛围的形成。除此之外，电子部会为物理竞赛，大学生电子设计大赛等竞赛提供培训和硬件支持。电子部历届成员多次在全国大学生电子设计大赛等竞赛中获得一、二、三等奖的好成绩。欢迎各位有志于从事电子技术方面研究的青年加入。</p>
+          </div>
+        </div>         
+      </div>
+      <div class="turnBtn"></div>
+      <div class="right">        
         <div class="section" id="section-4">
           <div class="orgInfo">
             <h1>OFFICE</h1>
             <span>办公室</span>
+          </div>
+          <div class="orgDetail">
+            <p>办公室作为主席团和校科协各个部门的沟通纽带，是校科协运作的保障部门，与其他部门都有着紧密的联系。办公室的工作主要包括 ：人员的组织与调配 、 活动的策划与总结 、 成员档案的归类与整理 、 文案的编辑与制作以及账务管理等 。在这里，你可以是掌握全局的策划者，可以是光彩照人的主持人，可以是默默辛勤的场务人员。在这里，你的沟通交流、活动组织策划能力可以得到提高。校科协办公室欢迎你的加入。</p>
           </div>
         </div>
         <div class="section" id="section-5">          
@@ -75,21 +94,31 @@
             <h1>COMMUNICATION</h1>
             <span>外联部</span>
           </div>
-        </div>          
-      </div>
-    </div>
-    <div target-name="page-3" id="p4">
-      <div class="container">
+          <div class="orgDetail">
+            <p>外联部，主要负责科协和外界的联系与日常活动的组织开展。其中包括校科协与企业之间的联系，科协与兄弟院校之间的联系，并经常举办讲座会谈等活动来增进相互之间的了解。这是一个极具挑战性的部门，在外联人的努力下我们已经与联想、华为、惠普、华硕、阿里巴巴等公司进行合作，不仅能提升大家的口才、沟通、组织能力，更重要的是它能开阔大家的眼界，磨练大家的意志，积累自己的人脉。外联部，欢迎你的加入！</p>
+          </div>
+        </div> 
         <div class="section" id="section-6">
           <div class="orgInfo">
             <h1>PUBLICITY</h1>
             <span>宣传部</span>
           </div>
+          <div class="orgDetail">
+            <p>科宣部全称科普宣传部，活跃在校科协各种宣传活动的第一线。用手绘展示科技风采，用网络传播科技文化，用视频呈现科技魅力，将科技与文艺紧密结合，把创新思想融入科技推广。通过形式丰富的活动在校内外进行科学普及，丰富同学们的课余生活，并扩大校科协在校内的影响力。
+科宣部管理着校科协的各网络门户，如人人科协主页、新浪微博等，在网络平台上向全校同学发布科协的动态，宣传科普知识。科宣部的工作需要具备使用PS等图像制作软件的应用能力，对于没有基础的同学，我们会组织专门的课程进行培训。</p>
+          </div>
         </div>
+      </div>
+    </div>
+    <div target-name="page-3" id="p4">
+      <div class="container">
         <div class="section" id="section-7">
           <div class="orgInfo">
             <h1>DEVELOPMENT</h1>
             <span>社发部</span>
+          </div>
+          <div class="orgDetail">
+            <p>社团发展部主要负责科协与各直属社团之间的日常联系与发展，使直属社团与科协联系紧密，更好的发展。同时也负责科协中的创新创业版块，负责学校的创新创业工作及创新项目与产业孵化，积极动员同学们和各参赛队的创新创业工作。同时处理创新创业中心的日常工作。</p>
           </div>
         </div>
         <div class="section" id="section-8">
@@ -97,11 +126,17 @@
             <h1>EVENTS</h1>
             <span>赛事部</span>
           </div>
+          <div class="orgDetail">
+            <p>赛事部隶属于创新中心，是负责组织和管理学生课内外竞赛的职能部门，致力于竞赛体系的建设和完善。期职能主要有赛事提醒、赛事推介、赛事经验传授、赛事资料汇总等，并负责全国一级赛事"挑战杯"在校内的承办。</p>
+          </div>
         </div>
         <div class="section" id="section-9">
           <div class="orgInfo">
             <h1>SAST-STUDIO</h1>
             <span>SAST工作室</span>
+          </div>
+          <div class="orgDetail">
+            <p>SAST工作室，面向于在学生科技创新的相关领域有较突出成就的同学。加入 SAST 工作室需提供相关成就的证明后由相关部门审议通过 。 该机构为成员们提供良好的研究与交流环境 ， 并提供相关身份证明 。能够加入 SAST 工作室也是我校从事科技创新工作的学生的一种荣誉象征。</p>
           </div>
         </div>
         <div class="section" id="section-10">
@@ -109,13 +144,16 @@
             <h1>AFFILIATED-ASSOCIATIOH</h1>
             <span>直属社团</span>
           </div>
+          <div class="orgDetail">
+            <p>校科协创新中心还有CG爱好者协会、ERP协会、安全技术协会、创业协会、漫漫邮子路、苹果爱好者俱乐部、嵌入式协会、华为花粉俱乐部、华夜工作室九个直属社团</p>
+          </div>
         </div>
       </div>
     </div>
     <div target-name="page-4" id="p5">
       <div class="container">
         <div class="text">
-          <h1>关于我们</h1>
+          <h1>加入我们</h1>
           <p>这里这么多字傻了吧卧槽一个简单的动画我竟然写了这么久！css3我日啊</p>
         </div>
       </div>
@@ -125,7 +163,7 @@
     <div class="section-outfloat hidden" id="section-5-0"></div>
   </div>
   <div class="home-nav"></div>
-  <script src="./dist/js/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="./dist/js/jquery.mousewheel.js"></script>
   <script src="./dist/js/screen.js"></script>
   <script src="./dist/js/main.js"></script>

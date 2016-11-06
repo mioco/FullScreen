@@ -1,27 +1,34 @@
 @media screen and (min-width: 790px) {
-  #p4 .container .section:first-child {
-    height: 100%;
-    width: 40%; }
-  #p4 .container .section {
-    width: 30%;
-    height: 50%; }
+  #p4 .container {
+    display: none; }
+    #p4 .container .section:first-child {
+      height: 100%;
+      width: 40%; }
   .section-1-3 {
-    left: 13vw;
-    top: 13vh;
-    width: 29.6vw;
-    height: 74vh;
-    background: #ccc; }
+    left: 25vh;
+    top: 10vh;
+    width: 80vh;
+    height: 80vh; }
+    .section-1-3 .section {
+      width: 50%;
+      height: 50%;
+      color: #000; }
+      .section-1-3 .section .orgInfo.active {
+        color: #fff; }
+    .section-1-3 .orgDetail {
+      width: 50vw;
+      height: 100vh;
+      top: 0;
+      left: 80vh;
+      padding: 20vh; }
   .section-5-3 {
-    left: 42.6vw;
-    top: 50vh;
-    width: 22.2vw;
-    height: 37vh;
-    background: #ccc; } }
-
-@media screen and (max-width: 790px) {
-  #p4 .container .section:first-child {
-    height: 100%;
-    width: 40%; }
-  #p4 .container .section {
-    width: 30%;
-    height: 50%; } }
+    left: 105vh;
+    top: 10vh;
+    width: 80vh;
+    height: 80vh;
+    background-image: url("../img/bg-2.jpg");
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover; }
+  .section-5-3.active {
+    left: 25vh; } }

@@ -14,7 +14,6 @@
         opacity: 1;
       }
     }
-    .container{
       .p5{
         @include prefix(animation, p5 1s);
       }
@@ -25,8 +24,6 @@
         left: 50%;
         top: 25%;
       }      
-      position: relative;
-    }
   }
 
   .section-1-4{
@@ -36,11 +33,11 @@
     background: #ddd;
   }
   .section-5-4{
-        width: 29vw;
+    width: 29vw;
     height: 50vh;
-    background: #ccc;
     margin: 25vh 0 0 15vw;
-
+    background-image: url('../img/bg-2.jpg');
+    @include prefix(background-size, cover);
   }
 
 }
