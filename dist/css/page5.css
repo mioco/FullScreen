@@ -31,4 +31,5 @@
 
 @media screen and (max-width: 790px) {
   #p5 .container {
+    padding: 35vh 6vh;
     position: relative; } }

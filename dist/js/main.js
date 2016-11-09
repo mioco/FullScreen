@@ -17,40 +17,47 @@ var sectionMove = function sectionMove(flag) {
       $('#section-1-0').attr('class', 'section-outfloat hidden');
       $('#section-5-0').attr('class', 'section-outfloat hidden');
     }
-    switch (parseInt(flag)) {
-      case 0:
-        $('#section-1-0').html('');
-        $('#section-5-0').html('');
-        break;
-      case 1:
-        $('#section-1-0').html($('.right').html());
-        $('#section-5-0').html($('.left').html());
-        if ($(window).height() >= 760) {
-          $('.left').css('opacity', 0);
-        }
-        break;
-      case 2:
-        $('#section-1-0').addClass('active').html($('#p3 .left').html());
-        $('#section-5-0').html($('#p3 .right').html());
-        break;
-      case 3:
-        $('#section-1-0').html($('#p4 .container').html());
-        $('#section-5-0').html('');
-        break;
-      case 4:
-        $('#section-1-0').html('');
-        $('#section-5-0').html('');
-        break;
-      default:
-        break;
+    if ($(window).width() >= 790) {
+      switch (parseInt(flag)) {
+        case 0:
+          $('#section-1-0').html('');
+          $('#section-5-0').html('');
+          break;
+        case 1:
+          $('#section-1-0').html($('.right').html());
+          $('#section-5-0').html($('.left').html());
+          if ($(window).width() >= 790) {
+            $('.left').css('opacity', 0);
+          }
+          break;
+        case 2:
+          $('#section-1-0').addClass('active').html($('#p3 .left').html());
+          $('#section-5-0').html($('#p3 .right').html());
+          break;
+        case 3:
+          $('#section-1-0').html($('#p4 .container').html());
+          $('#section-5-0').html('');
+          break;
+        case 4:
+          $('#section-1-0').html('');
+          $('#section-5-0').html('');
+          break;
+        default:
+          break;
+      }
     }
   }, 100);
 
   //清空active
-  $('html').find('.orgInfo').removeClass('active');
+  $('html').find('.orgInfo').removeClass('active').siblings().removeClass('active');
+  $('html').find('.orgInfo .btn').remove();
   p5(flag);
 };
-
+$(window).resize(function () {
+  if ($(window).width() <= 790) {
+    $('#section-1-0,#section-5-0').html('');
+  }
+});
 $('html').on({
   mousewheel: function mousewheel(event) {
     sectionMove(Screen.config.flag - event.deltaY);
@@ -108,5 +115,27 @@ $('nav .btn').on('click', function () {
     $('nav .btn').addClass('active');
   }
 });
+
+$(window).resize(function () {
+  $('.left').css('opacity', 1);
+});
+
+window.login = function () {
+  $('.nav').addClass('login');
+  $('.nav ul#notlogin').attr('hidden', 'hidden');
+  $('.nav ul#login').removeAttr('hidden');
+};
+window.loginout = function () {
+  $('.nav').removeClass('login');
+  $('.nav ul#login').attr('hidden', 'hidden');
+  $('.nav ul#notlogin').removeAttr('hidden');
+};
+
+window.regist = function () {
+  $('div#regist').addClass('active');
+};
+window.rcancel = function () {
+  $('div#regist').removeClass('active');
+};
 
 },{}]},{},[1]);

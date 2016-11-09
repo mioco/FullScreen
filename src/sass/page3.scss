@@ -139,6 +139,56 @@
 
 @media screen and (max-width: 790px){
   #p3{
-    
+    overflow-y: auto;
+    width: 101.5vw;
+    .left, .right{
+      .section{
+        .orgInfo:not(.active){
+          margin: 4vh 5vw 4vh 5vw;
+        }
+        .orgInfo{
+          height: 50vh;
+          width: 90vw;
+          background-color: #abc;
+          box-sizing: border-box;
+          padding: 2vh;
+        }
+        .orgDetail:not(.active){
+          display: none;
+        }
+        .orgInfo.active{
+          height: 100vh;
+          width: 100vw;
+          position: fixed;
+          left: 0;
+          top: 0;
+          .btn{
+            width: 30vw;
+            height: 4vh;
+            border: 1px solid #fff;
+            text-align: center;
+            padding-top: 1vh;
+            margin: 50vw auto;
+            color: #fff;
+          }
+        }
+      }
+      .section:nth-child(1) .orgInfo, .section:nth-child(6) .orgInfo{
+        background-image: url('../img/p3-0.jpg');
+        @include prefix(background-size, cover);
+      }
+      .section:nth-child(2) .orgInfo, .section:nth-child(7) .orgInfo{
+        background-image: url('../img/p3-1.jpg');
+        @include prefix(background-size, cover);
+      }
+      .section:nth-child(3) .orgInfo, .section:nth-child(8) .orgInfo{
+        background-image: url('../img/p3-2.jpg');
+        @include prefix(background-size, cover);
+      }
+      .section:nth-child(4) .orgInfo, .section:nth-child(9) .orgInfo{
+        background-image: url('../img/bg-2.jpg');
+        @include prefix(background-size, cover);
+      }
+    }
   }
 }

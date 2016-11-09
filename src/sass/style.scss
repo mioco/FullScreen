@@ -23,6 +23,7 @@ body{
   width: 100vw;
   height: 100vh;
   position: absolute;
+  overflow: hidden;
 }
 
 .hidden{
@@ -34,6 +35,9 @@ a{
 }
 li{
   list-style: none;
+}
+p{
+  text-align: justify;
 }
 @import 'page1';
 @import 'page2';
@@ -139,5 +143,40 @@ li{
 @media screen and (max-width: 790px){
   *{
     @include prefix(transition, all .3s ease);
+  }
+  .section .orgInfo{
+  }
+    
+  .orgDetail.active{
+    @keyframes detail{
+      from{bottom: -50vh;}
+      to{bottom: 0;}
+    }
+    padding: 6vh;
+    line-height: 2;
+    background-color: #fff;
+    @include prefix(animation, detail .5s ease )
+    position: fixed;
+    bottom: 0;
+    box-sizing: border-box;
+  }
+  // nav
+  ////////////////////////////////////////////
+  .home-nav {
+    position: absolute;
+    bottom: 3vh;
+    width: 100%;
+    text-align: center;
+    .home-nav-item{
+      display: inline-block;
+      background: rgba(0,0,0,.3);
+      width: 2vw;
+      height: 2vw;
+      margin-right: 3vw;
+      border-radius: 50%;
+    }
+    .home-nav-item.active{
+      background: rgba(255,255,255,.3);
+    }
   }
 }

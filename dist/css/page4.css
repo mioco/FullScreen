@@ -32,3 +32,60 @@
     -webkit-background-size: cover; }
   .section-5-3.active {
     left: 15vw; } }
+
+@media screen and (max-width: 790px) {
+  #p4 {
+    overflow-y: auto;
+    width: 101.5vw; }
+    #p4 .container .section .orgInfo {
+      height: 25vh;
+      width: 100vw;
+      background-color: #abc;
+      box-sizing: border-box;
+      padding: 2vh; }
+    #p4 .container .section .orgInfo.active:before {
+      animation: click 0.5s ease;
+      -moz-animation: click 0.5s ease;
+      -webkit-animation: click 0.5s ease;
+      display: block;
+      content: ' ';
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      transform-origin: 0% 0%;
+      -moz-transform-origin: 0% 0%;
+      -webkit-transform-origin: 0% 0%;
+      transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      z-index: -1;
+      width: 200vh;
+      height: 200vh; }
+  @keyframes click {
+    from {
+      width: 25vw;
+      height: 25vw; }
+    to {
+      width: 200vh;
+      height: 200vh; } }
+    #p4 .container .section .orgDetail:not(.active) {
+      display: none; }
+    #p4 .container .section .orgInfo.active {
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      left: 0;
+      top: 0;
+      color: #fff;
+      text-align: center;
+      padding-top: 20vh; }
+    #p4 .container .section:nth-child(1) .orgInfo {
+      background-color: #deba90; }
+    #p4 .container .section:nth-child(2) .orgInfo {
+      background-color: #debaa0; }
+    #p4 .container .section:nth-child(3) .orgInfo {
+      background-color: #debac0; }
+    #p4 .container .section:nth-child(4) .orgInfo {
+      background-color: #debae0; } }
