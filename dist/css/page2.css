@@ -4,12 +4,6 @@
     -moz-background-size: cover;
     -webkit-background-size: cover;
     left: 100vw; }
-  @keyframes textanime {
-    0% {
-      top: 80vh;
-      opacity: 0; }
-    80% {
-      top: 0; } }
     #p2 div {
       float: left; }
     #p2 .left {
@@ -36,3 +30,37 @@
     padding: 20vh 15vw;
     line-height: 2.2;
     text-align: justify; } }
+
+@media screen and (max-width: 790px) {
+  #p2 .left {
+    display: none; }
+  #p2 .right {
+    display: none; }
+  .section-5-1 {
+    height: 80vh;
+    width: 82vw;
+    left: 5vw;
+    top: 14vh;
+    position: absolute;
+    background: #ac9e9d;
+    padding: 14vh 8vw 0 8vw;
+    box-sizing: border-box;
+    line-height: 2;
+    text-align: justify;
+    color: #fff; }
+    .section-5-1 h1 {
+      display: none; }
+  .section-1-1 #right-box {
+    width: 80vw;
+    height: 20vh;
+    position: absolute;
+    top: 8vh;
+    left: 10vw;
+    background-image: url("../img/bg-2.jpg");
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-position: 0% 0;
+    -moz-background-position: 0% 0;
+    -webkit-background-position: 0% 0;
+    z-index: 1; } }

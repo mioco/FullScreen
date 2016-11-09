@@ -13,38 +13,38 @@
       }
     } 
   }
-  
+  .section-1-3, .section-5-3{
+    top: 50%;    
+    margin-top: - (35vw / 2);
+    width: 35vw;
+    height: 35vw;
+  }
   .section-1-3{ 
-    left: 25vh;
-    top: 10vh;
-    width: 80vh;
-    height: 80vh;
+    left: 15vw;
     .section{
       width: 50%;
       height: 50%;
       color: #000;
       .orgInfo.active{
         color: #fff;
+        background: rgba(0,0,0,0);
       }
     }
     .orgDetail{
-      width: 50vw;
+      width: 40vw;
       height: 100vh;
       top: 0;
-      left: 80vh;
-      padding: 20vh;
+      left: 40vw;
+      padding: 10vw;
     }
   }
   .section-5-3{
-    left: 105vh;
-    top: 10vh;
-    width: 80vh;
-    height: 80vh;    
+    left: 50vw;   
     background-image: url('../img/bg-2.jpg');
     @include prefix(background-size, cover);
   }
   .section-5-3.active{
-    left: 25vh;
+    left: 15vw;
   }
 }
 

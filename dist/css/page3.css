@@ -60,7 +60,10 @@
     .section-1-2.active .orgInfo.active {
       background-position: 100% 0;
       -moz-background-position: 100% 0;
-      -webkit-background-position: 100% 0; }
+      -webkit-background-position: 100% 0;
+      text-align: right; }
+      .section-1-2.active .orgInfo.active h1, .section-1-2.active .orgInfo.active span {
+        margin-right: -1vw; }
   .section-5-2.active {
     width: 50vw;
     height: 100vh;
@@ -87,6 +90,8 @@
       background-position: 0% 0;
       -moz-background-position: 0% 0;
       -webkit-background-position: 0% 0; }
+      .section-5-2.active .orgInfo.active h1, .section-5-2.active .orgInfo.active span {
+        margin-left: -1vw; }
   .section-1-2 .section .orgInfo, .section-5-2 .section .orgInfo {
     color: #fff; }
   .section-1-2 .section .orgInfo.active, .section-5-2 .section .orgInfo.active {
@@ -94,14 +99,11 @@
     background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover; }
-  @keyframes active {
-    0% {
-      position: absolute;
-      top: 0;
-      left: 0; }
-    100% {
-      width: 50vw;
-      height: 100vh; } }
+    .section-1-2 .section .orgInfo.active h1, .section-5-2 .section .orgInfo.active h1 {
+      margin-top: 35vh;
+      font-size: 4vw; }
+    .section-1-2 .section .orgInfo.active span, .section-5-2 .section .orgInfo.active span {
+      font-size: 2vw; }
   .section-1-2 .section .orgDetail.active, .section-5-2 .section .orgDetail.active {
     animation: textanime 1s ease;
     -moz-animation: textanime 1s ease;
@@ -112,4 +114,4 @@
     width: 50vw;
     height: 100vh;
     top: 0;
-    padding: 10vw; } }
+    padding: 30vh 10vw; } }

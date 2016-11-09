@@ -5,7 +5,7 @@
 }
 
 *{
-  @include prefix(transition, all .5s ease);
+  font-family: 'Yu Gothic UI';
 }
 body{
   margin: 0;
@@ -32,37 +32,33 @@ body{
 a{
   text-decoration: none;
 }
+li{
+  list-style: none;
+}
 @import 'page1';
 @import 'page2';
 @import 'page3';
 @import 'page4';
 @import 'page5';
 
-#p1 {
-  // background-image: url('../img/bg-1.jpg');
-  @include prefix(background-size, cover);
-}
-#p2{
-  // background-image: url('../img/bg-2.jpg');
-  @include prefix(background-size, cover);
-  left: 100vw;
-}
-#p3{
-  // background-image: url('../img/bg-3.jpg');
-  @include prefix(background-size, cover);
-  left: 200vw;
-}
-#p4{
-  // background-image: url('../img/bg-4.jpg');
-  @include prefix(background-size, cover);
-  left: 300vw;
-}
-#p5{
-  left: 400vw;
-}
 
+  #p2{
+    left: 100vw;
+  }
+  #p3{
+    left: 200vw;
+  }
+  #p4{
+    left: 300vw;
+  }
+  #p5{
+    left: 400vw;
+  }
 ////////////////////////////////////////////
 @media screen and (min-width: 790px){
+  *{
+    @include prefix(transition, all .5s ease);
+  }
   .section-outfloat .section{
     .orgInfo{
       padding: 1em;
@@ -70,7 +66,6 @@ a{
       height: 100%;
       box-sizing: border-box;
       border: 1px solid #ddd;
-      @include prefix(transform-delay, .5s)
     }
     .orgInfo:not(.active):hover{
       @include prefix(transform, scale(0.95, 0.95));
@@ -115,7 +110,17 @@ a{
       left: 0;
     }
     .section{
+      h1{
+        font-size: 2vw;
+      }
       .orgDetail.active{
+        @keyframes textanime{
+          0%{
+            top: 80vh;
+            opacity: 0;
+          }
+          80%{top: 0;}
+        }
         @include prefix(animation, textanime 1s ease )
         visibility: visible;
         opacity: 1;
@@ -130,4 +135,9 @@ a{
       }
     }
   }  
+}
+@media screen and (max-width: 790px){
+  *{
+    @include prefix(transition, all .3s ease);
+  }
 }

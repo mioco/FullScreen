@@ -31,7 +31,6 @@
     launch();
   };
 
-  //滚动事件监听
   var launch = function launch() {
     var unit = 0;
     var direction = '';
@@ -49,28 +48,31 @@
     }
     $('#home-nav-item-' + conf.flag).addClass('active');
 
-    $('html').on('mousewheel', function (event) {
-      if (conf.direction) {
-        unit = $(window).width();
-        direction = 'left';
-      } else {
-        unit = $(window).height();
-        direction = 'top';
-      }
+    //事件监听
+    $('html').on({
+      mousewheel: function(event){
+        if (conf.direction) {
+          unit = $(window).width();
+          direction = 'left';
+        } else {
+          unit = $(window).height();
+          direction = 'top';
+        }
 
-      //转场参数
-      let lastFlag = conf.flag;
+        //转场参数
+        let lastFlag = conf.flag;
 
-      if (event.deltaY == -1) {
-        conf.flag = conf.flag == conf.pageCount - 1 ? conf.pageCount - 1 : conf.flag + 1;
-      }
-      if (event.deltaY == 1) {
-        conf.flag = conf.flag == 0 ? conf.flag : conf.flag - 1;
-      }
-      distance = -conf.flag * unit;
+        if (event.deltaY == -1) {
+          conf.flag = conf.flag == conf.pageCount - 1 ? conf.pageCount - 1 : conf.flag + 1;
+        }
+        if (event.deltaY == 1) {
+          conf.flag = conf.flag == 0 ? conf.flag : conf.flag - 1;
+        }
+        distance = -conf.flag * unit;
 
-      conf.fade(conf.flag, lastFlag);
-      move(direction, distance, conf.flag);
+        conf.fade(conf.flag, lastFlag);
+        move(direction, distance, conf.flag);
+      }
     });
     //窗口大小变化监听
     $(window).resize(function () {
@@ -78,6 +80,7 @@
     });
   };
 
+  var 
   var move = function move(direction, distance, flag) {
     screen.config.pageDOM.css(direction, distance);
     $('#home-nav-item-' + flag).addClass('active').siblings().removeClass('active');

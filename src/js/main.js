@@ -4,6 +4,8 @@ var classSet = function(dom, num) {
 }
 
 var sectionMove = function(flag) {
+  if(flag >= Screen.config.pageCount) return false;
+  window.flag = flag;
   setTimeout(function(){
     if( flag >= 0 && flag <= 4 ){
       classSet($('#section-1-0'), flag)
@@ -13,10 +15,16 @@ var sectionMove = function(flag) {
       $('#section-5-0').attr('class', 'section-outfloat hidden');
     }
     switch(parseInt(flag)) {
+      case 0:
+        $('#section-1-0').html('');
+        $('#section-5-0').html('');
+        break;
       case 1:
         $('#section-1-0').html($('.right').html());
         $('#section-5-0').html($('.left').html());
-        $('.left').css('opacity', 0)
+        if($(window).height() >= 760){
+          $('.left').css('opacity', 0)
+          }
         break;
       case 2:
         $('#section-1-0').addClass('active').html($('#p3 .left').html());
@@ -36,15 +44,19 @@ var sectionMove = function(flag) {
 
   //清空active
   $('html').find('.orgInfo').removeClass('active');
+  p5(flag);
 }
 
-$('html').on('mousewheel', function (event) {
-  let flag = Screen.config.flag - event.deltaY;
-  if(flag >= Screen.config.pageCount) return false;
-  sectionMove(flag);
-  window.flag = flag[0];
-
-  p5(flag);
+$('html').on({
+  mousewheel: function (event) {
+    sectionMove(Screen.config.flag - event.deltaY);
+  },
+  swipeleft: function() {
+    sectionMove(Screen.config.flag + 1);
+  },
+  swiperight: function() {
+    sectionMove(Screen.config.flag - 1);
+  }
 })
 $(document).on('mouseover', '.home-nav-item', function() {
   let reg = new RegExp(/[0-9]+(?=[^0-9]*$)/);
@@ -81,5 +93,15 @@ $('.turnBtn').on('click', function() {
   }else {
     p3_flag = 1;
     $('#section-1-0').addClass('active').siblings('.section-outfloat').removeClass('active');
+  }
+})
+
+$('nav .btn').on('click', function(){
+  if( $('nav .btn').hasClass('active') ) {
+    $('.nav').removeClass('active')
+    $('nav .btn').removeClass('active')
+  }else {
+    $('.nav').addClass('active');
+    $('nav .btn').addClass('active')
   }
 })
