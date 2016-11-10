@@ -65,29 +65,72 @@ p {
     #p1 nav .nav #regist {
       width: 100vw;
       height: 0;
-      top: 0;
+      top: 12vh;
       left: 0;
       position: absolute;
-      background-color: #debaa5;
       text-align: center;
       opacity: 0; }
       #p1 nav .nav #regist input, #p1 nav .nav #regist button {
-        width: 70vw;
-        padding: 3vh;
+        width: 20%;
+        padding: .5em;
         border: 1px solid #aab;
         border-radius: 3px;
         margin-top: 3vh; }
       #p1 nav .nav #regist button {
         background-color: transparent;
-        border-color: #fff;
-        color: #fff; }
+        border-color: #000;
+        color: #000; }
     #p1 nav .nav #regist.active {
+      animation: regist 0.5s ease;
+      -moz-animation: regist 0.5s ease;
+      -webkit-animation: regist 0.5s ease;
       opacity: 1;
-      height: 100vh; }
+      height: 88vh;
+      background-color: #fff;
+      padding-top: 10vh; }
+  @keyframes regist {
+    0% {
+      background-color: transparent; }
+    50% {
+      background-color: transparent; }
+    100% {
+      background-color: #fff; } }
+    #p1 nav .nav #regist.active:before {
+      animation: click 0.5s ease;
+      -moz-animation: click 0.5s ease;
+      -webkit-animation: click 0.5s ease;
+      display: block;
+      content: ' ';
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 50%;
+      transform-origin: 0% 0%;
+      -moz-transform-origin: 0% 0%;
+      -webkit-transform-origin: 0% 0%;
+      transform: translate(16%, -43%);
+      -moz-transform: translate(16%, -43%);
+      -webkit-transform: translate(16%, -43%);
+      z-index: -1;
+      width: 130vw;
+      height: 130vw; }
+  @keyframes click {
+    from {
+      width: 25vw;
+      height: 25vw; }
+    to {
+      width: 130vw;
+      height: 130vw; } }
   #p1 .jumbotron {
     float: left;
     background-image: url("../img/bg-1.jpg");
     background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-position: 0% 20%;
+    -moz-background-position: 0% 20%;
+    -webkit-background-position: 0% 20%;
     height: 75vh;
     width: 92vw;
     overflow: hidden; }
@@ -205,9 +248,10 @@ p {
       top: 20vh;
       left: 0;
       position: absolute;
-      background-color: #debaa5;
+      background-color: #6b6962;
       text-align: center;
-      opacity: 0; }
+      opacity: 0;
+      z-index: 1; }
       #p1 nav .nav #regist input, #p1 nav .nav #regist button, #p1 nav .home-bottom #regist input, #p1 nav .home-bottom #regist button {
         width: 70vw;
         padding: 3vw;
@@ -222,7 +266,7 @@ p {
       opacity: 1;
       height: 80vh; }
   #p1 nav .nav.active {
-    background: #debaa5;
+    background: #6b6962;
     overflow: inherit;
     height: 20vh; }
     #p1 nav .nav.active ul#login {
@@ -442,7 +486,8 @@ p {
       width: 90vw;
       background-color: #abc;
       box-sizing: border-box;
-      padding: 2vh; }
+      padding: 2vh;
+      color: #fff; }
     #p3 .left .section .orgDetail:not(.active), #p3 .right .section .orgDetail:not(.active) {
       display: none; }
     #p3 .left .section .orgInfo.active, #p3 .right .section .orgInfo.active {
@@ -451,31 +496,33 @@ p {
       position: fixed;
       left: 0;
       top: 0; }
-      #p3 .left .section .orgInfo.active .btn, #p3 .right .section .orgInfo.active .btn {
-        width: 30vw;
-        height: 4vh;
-        border: 1px solid #fff;
-        text-align: center;
-        padding-top: 1vh;
-        margin: 50vw auto;
-        color: #fff; }
-    #p3 .left .section:nth-child(1) .orgInfo, #p3 .left .section:nth-child(6) .orgInfo, #p3 .right .section:nth-child(1) .orgInfo, #p3 .right .section:nth-child(6) .orgInfo {
-      background-image: url("../img/p3-0.jpg");
-      background-size: cover;
-      -moz-background-size: cover;
-      -webkit-background-size: cover; }
-    #p3 .left .section:nth-child(2) .orgInfo, #p3 .left .section:nth-child(7) .orgInfo, #p3 .right .section:nth-child(2) .orgInfo, #p3 .right .section:nth-child(7) .orgInfo {
+    #p3 .left .section:nth-child(1) .orgInfo {
       background-image: url("../img/p3-1.jpg");
       background-size: cover;
       -moz-background-size: cover;
       -webkit-background-size: cover; }
-    #p3 .left .section:nth-child(3) .orgInfo, #p3 .left .section:nth-child(8) .orgInfo, #p3 .right .section:nth-child(3) .orgInfo, #p3 .right .section:nth-child(8) .orgInfo {
+    #p3 .left .section:nth-child(2) .orgInfo {
       background-image: url("../img/p3-2.jpg");
       background-size: cover;
       -moz-background-size: cover;
       -webkit-background-size: cover; }
-    #p3 .left .section:nth-child(4) .orgInfo, #p3 .left .section:nth-child(9) .orgInfo, #p3 .right .section:nth-child(4) .orgInfo, #p3 .right .section:nth-child(9) .orgInfo {
-      background-image: url("../img/bg-2.jpg");
+    #p3 .left .section:nth-child(3) .orgInfo {
+      background-image: url("../img/p3-0.jpg");
+      background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover; }
+    #p3 .right .section:nth-child(1) .orgInfo {
+      background-image: url("../img/p3-3.jpg");
+      background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover; }
+    #p3 .right .section:nth-child(2) .orgInfo {
+      background-image: url("../img/p3-2.jpg");
+      background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover; }
+    #p3 .right .section:nth-child(3) .orgInfo {
+      background-image: url("../img/p3-0.jpg");
       background-size: cover;
       -moz-background-size: cover;
       -webkit-background-size: cover; } }
@@ -508,7 +555,7 @@ p {
       padding: 10vw; }
   .section-5-3 {
     left: 50vw;
-    background-image: url("../img/bg-2.jpg");
+    background-image: url("../img/bg-4.jpg");
     background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover; }
@@ -564,13 +611,36 @@ p {
       text-align: center;
       padding-top: 20vh; }
     #p4 .container .section:nth-child(1) .orgInfo {
-      background-color: #deba90; }
+      background-image: url("../img/p3-1.jpg");
+      background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover; }
     #p4 .container .section:nth-child(2) .orgInfo {
-      background-color: #debaa0; }
+      background-image: url("../img/p3-1.jpg");
+      background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      background-position: 0% 36%;
+      -moz-background-position: 0% 36%;
+      -webkit-background-position: 0% 36%; }
     #p4 .container .section:nth-child(3) .orgInfo {
-      background-color: #debac0; }
+      color: #fff;
+      background-image: url("../img/p3-1.jpg");
+      background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      background-position: 0% 71%;
+      -moz-background-position: 0% 71%;
+      -webkit-background-position: 0% 71%; }
     #p4 .container .section:nth-child(4) .orgInfo {
-      background-color: #debae0; } }
+      color: #fff;
+      background-image: url("../img/p3-1.jpg");
+      background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      background-position: 0% 106%;
+      -moz-background-position: 0% 106%;
+      -webkit-background-position: 0% 106%; } }
 
 @media screen and (min-width: 790px) {
   @keyframes p5 {
@@ -598,7 +668,7 @@ p {
     width: 29vw;
     height: 50vh;
     margin: 25vh 0 0 15vw;
-    background-image: url("../img/bg-2.jpg");
+    background-image: url("../img/bg-3.jpg");
     background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover; } }

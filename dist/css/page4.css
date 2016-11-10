@@ -26,7 +26,7 @@
       padding: 10vw; }
   .section-5-3 {
     left: 50vw;
-    background-image: url("../img/bg-2.jpg");
+    background-image: url("../img/bg-4.jpg");
     background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover; }
@@ -82,10 +82,33 @@
       text-align: center;
       padding-top: 20vh; }
     #p4 .container .section:nth-child(1) .orgInfo {
-      background-color: #deba90; }
+      background-image: url("../img/p3-1.jpg");
+      background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover; }
     #p4 .container .section:nth-child(2) .orgInfo {
-      background-color: #debaa0; }
+      background-image: url("../img/p3-1.jpg");
+      background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      background-position: 0% 36%;
+      -moz-background-position: 0% 36%;
+      -webkit-background-position: 0% 36%; }
     #p4 .container .section:nth-child(3) .orgInfo {
-      background-color: #debac0; }
+      color: #fff;
+      background-image: url("../img/p3-1.jpg");
+      background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      background-position: 0% 71%;
+      -moz-background-position: 0% 71%;
+      -webkit-background-position: 0% 71%; }
     #p4 .container .section:nth-child(4) .orgInfo {
-      background-color: #debae0; } }
+      color: #fff;
+      background-image: url("../img/p3-1.jpg");
+      background-size: cover;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      background-position: 0% 106%;
+      -moz-background-position: 0% 106%;
+      -webkit-background-position: 0% 106%; } }

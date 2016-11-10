@@ -152,6 +152,7 @@
           background-color: #abc;
           box-sizing: border-box;
           padding: 2vh;
+          color: #fff;
         }
         .orgDetail:not(.active){
           display: none;
@@ -162,31 +163,35 @@
           position: fixed;
           left: 0;
           top: 0;
-          .btn{
-            width: 30vw;
-            height: 4vh;
-            border: 1px solid #fff;
-            text-align: center;
-            padding-top: 1vh;
-            margin: 50vw auto;
-            color: #fff;
-          }
         }
       }
-      .section:nth-child(1) .orgInfo, .section:nth-child(6) .orgInfo{
-        background-image: url('../img/p3-0.jpg');
-        @include prefix(background-size, cover);
-      }
-      .section:nth-child(2) .orgInfo, .section:nth-child(7) .orgInfo{
+    }
+
+    .left{        
+      .section:nth-child(1) .orgInfo{
         background-image: url('../img/p3-1.jpg');
         @include prefix(background-size, cover);
       }
-      .section:nth-child(3) .orgInfo, .section:nth-child(8) .orgInfo{
+      .section:nth-child(2) .orgInfo{
         background-image: url('../img/p3-2.jpg');
         @include prefix(background-size, cover);
       }
-      .section:nth-child(4) .orgInfo, .section:nth-child(9) .orgInfo{
-        background-image: url('../img/bg-2.jpg');
+      .section:nth-child(3) .orgInfo{
+        background-image: url('../img/p3-0.jpg');
+        @include prefix(background-size, cover);
+      }
+    }
+    .right{        
+      .section:nth-child(1) .orgInfo{
+        background-image: url('../img/p3-3.jpg');
+        @include prefix(background-size, cover);
+      }
+      .section:nth-child(2) .orgInfo{
+        background-image: url('../img/p3-2.jpg');
+        @include prefix(background-size, cover);
+      }
+      .section:nth-child(3) .orgInfo{
+        background-image: url('../img/p3-0.jpg');
         @include prefix(background-size, cover);
       }
     }

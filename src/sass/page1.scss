@@ -47,37 +47,80 @@
           }
         }
         #regist{
+
+          // @include prefix(transition-delay, .5s);
           width: 100vw;
           height: 0;
-          top: 0;
+          top: 12vh;
           left: 0;
           position: absolute;
-          background-color: #debaa5;
           text-align: center;
           opacity: 0;
           input, button{
-            width: 70vw;
-            padding: 3vh;
+            width: 20%;
+            padding: .5em;
             border: 1px solid #aab;
             border-radius: 3px;
             margin-top: 3vh
           }
           button{
             background-color: transparent;
-            border-color: #fff;
-            color: #fff;
+            border-color: #000;
+            color: #000;
           }
         }
         #regist.active{
+          @keyframes regist{
+            0%{
+              background-color: transparent;
+            }
+            50%{              
+              background-color: transparent;
+              
+            }
+            100%{              
+              background-color: #fff;
+            }
+          }
+          @include prefix(animation, regist .5s ease);
           opacity: 1;
-          height: 100vh;
+          height: 88vh;
+          background-color: #fff;
+          padding-top: 10vh;
+        }
+        #regist.active:before{
+          @keyframes click{
+            from{
+              width: 25vw;
+              height: 25vw;
+            }
+            to{
+              width: 130vw;
+              height: 130vw;
+            }
+          }
+          @include prefix(animation, click .5s ease);
+          display: block;
+          content: ' ';
+          background-color: #fff;
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-radius: 50%;
+          @include prefix(transform-origin, 0% 0%)
+          @include prefix(transform, translate(16%,-43%))
+          z-index: -1;
+          width: 130vw;
+          height: 130vw;
         }
       }
     }
     .jumbotron{
       float: left;
       background-image: url('../img/bg-1.jpg');
-      background-size: cover;
+      @include prefix(background-size, cover);
+      @include prefix(background-position, 0% 20%);
+
       height: 75vh;
       width: 92vw;
       overflow: hidden;
@@ -212,9 +255,10 @@
           top: 20vh;
           left: 0;
           position: absolute;
-          background-color: #debaa5;
+          background-color: #6b6962;
           text-align: center;
           opacity: 0;
+          z-index: 1;
           input, button{
             width: 70vw;
             padding: 3vw;
@@ -234,7 +278,7 @@
         }
       }
       .nav.active{
-        background: #debaa5;
+        background: #6b6962;
         overflow: inherit;
         height: 20vh;  
         ul#login{

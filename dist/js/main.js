@@ -50,7 +50,7 @@ var sectionMove = function sectionMove(flag) {
 
   //清空active
   $('html').find('.orgInfo').removeClass('active').siblings().removeClass('active');
-  $('html').find('.orgInfo .btn').remove();
+
   p5(flag);
 };
 $(window).resize(function () {
@@ -118,6 +118,7 @@ $('nav .btn').on('click', function () {
 
 $(window).resize(function () {
   $('.left').css('opacity', 1);
+  window.location.reload();
 });
 
 window.login = function () {
@@ -132,7 +133,11 @@ window.loginout = function () {
 };
 
 window.regist = function () {
-  $('div#regist').addClass('active');
+  if ($('div#regist').hasClass('active')) {
+    $('div#regist').removeClass('active');
+  } else {
+    $('div#regist').addClass('active');
+  }
 };
 window.rcancel = function () {
   $('div#regist').removeClass('active');

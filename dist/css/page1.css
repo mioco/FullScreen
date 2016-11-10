@@ -33,29 +33,72 @@
     #p1 nav .nav #regist {
       width: 100vw;
       height: 0;
-      top: 0;
+      top: 12vh;
       left: 0;
       position: absolute;
-      background-color: #debaa5;
       text-align: center;
       opacity: 0; }
       #p1 nav .nav #regist input, #p1 nav .nav #regist button {
-        width: 70vw;
-        padding: 3vh;
+        width: 20%;
+        padding: .5em;
         border: 1px solid #aab;
         border-radius: 3px;
         margin-top: 3vh; }
       #p1 nav .nav #regist button {
         background-color: transparent;
-        border-color: #fff;
-        color: #fff; }
+        border-color: #000;
+        color: #000; }
     #p1 nav .nav #regist.active {
+      animation: regist 0.5s ease;
+      -moz-animation: regist 0.5s ease;
+      -webkit-animation: regist 0.5s ease;
       opacity: 1;
-      height: 100vh; }
+      height: 88vh;
+      background-color: #fff;
+      padding-top: 10vh; }
+  @keyframes regist {
+    0% {
+      background-color: transparent; }
+    50% {
+      background-color: transparent; }
+    100% {
+      background-color: #fff; } }
+    #p1 nav .nav #regist.active:before {
+      animation: click 0.5s ease;
+      -moz-animation: click 0.5s ease;
+      -webkit-animation: click 0.5s ease;
+      display: block;
+      content: ' ';
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-radius: 50%;
+      transform-origin: 0% 0%;
+      -moz-transform-origin: 0% 0%;
+      -webkit-transform-origin: 0% 0%;
+      transform: translate(16%, -43%);
+      -moz-transform: translate(16%, -43%);
+      -webkit-transform: translate(16%, -43%);
+      z-index: -1;
+      width: 130vw;
+      height: 130vw; }
+  @keyframes click {
+    from {
+      width: 25vw;
+      height: 25vw; }
+    to {
+      width: 130vw;
+      height: 130vw; } }
   #p1 .jumbotron {
     float: left;
     background-image: url("../img/bg-1.jpg");
     background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-position: 0% 20%;
+    -moz-background-position: 0% 20%;
+    -webkit-background-position: 0% 20%;
     height: 75vh;
     width: 92vw;
     overflow: hidden; }
@@ -173,9 +216,10 @@
       top: 20vh;
       left: 0;
       position: absolute;
-      background-color: #debaa5;
+      background-color: #6b6962;
       text-align: center;
-      opacity: 0; }
+      opacity: 0;
+      z-index: 1; }
       #p1 nav .nav #regist input, #p1 nav .nav #regist button, #p1 nav .home-bottom #regist input, #p1 nav .home-bottom #regist button {
         width: 70vw;
         padding: 3vw;
@@ -190,7 +234,7 @@
       opacity: 1;
       height: 80vh; }
   #p1 nav .nav.active {
-    background: #debaa5;
+    background: #6b6962;
     overflow: inherit;
     height: 20vh; }
     #p1 nav .nav.active ul#login {
